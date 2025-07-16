@@ -10,7 +10,7 @@ st.markdown("<p style='text-align: center;'>A quick glance at how different mode
 st.markdown("----")
 
 # Load the saved model performance CSV
-csv_path = "C:\My_Place\Employee_Salary_Prediction-Using-ML_Algos\employee-salary-prediction-ml-app\streamlit_app\pages\model_performance.csv"
+csv_path = ".\pages\model_performance.csv"
 try:
     df = pd.read_csv(csv_path)
 
@@ -31,7 +31,7 @@ try:
     # Bar Chart of all models
     st.subheader("📈 Accuracy Comparison of All Models")
     fig, ax = plt.subplots()
-    sns.barplot(data=df, y="Model", x="Accuracy", palette="Blues_d", ax=ax)
+    sns.barplot(data=df, y="Model", x="Accuracy", hue='Model', palette="Blues_d", legend=False, ax=ax)
     ax.set_title("Model Accuracy Comparison")
     st.pyplot(fig)
 
@@ -49,7 +49,7 @@ except FileNotFoundError:
 st.markdown("## 🔍 Confusion Matrix")
 
 try:
-    cm = np.load("C:\My_Place\Employee_Salary_Prediction-Using-ML_Algos\employee-salary-prediction-ml-app\streamlit_app\pages\confusion_matrix.npy")  # File is in the same folder as performance.py
+    cm = np.load(".\pages\confusion_matrix.npy")
     fig, ax = plt.subplots()
     sns.heatmap(cm, annot=True, fmt="d", cmap="Blues", ax=ax)
     ax.set_xlabel("Predicted")
