@@ -42,8 +42,8 @@ cd employee-salary-prediction-ml-app </pre>
 2. Create Virtual Environment
 <pre>bash
 
-python -m venv myenv
-myenv\Scripts\activate   # On Windows </pre>
+python -m venv .venv
+.venv\Scripts\activate   # On Windows </pre>
 
 3. Install Requirements
 <pre>bash

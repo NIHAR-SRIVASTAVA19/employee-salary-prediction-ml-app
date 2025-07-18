@@ -4,7 +4,6 @@ import pickle
 import numpy as np
 import joblib
 
-model_path = r"..\models\gb_pipeline.pkl"
 
 # Mapping for education levels to numerical values
 education_mapping = {
@@ -69,7 +68,7 @@ race_mapping = {
     "Other / Not Specified": "Other"
 }
 
-
+model_path = r"..\models\gb_pipeline.pkl"
 
 try:
     pipeline = joblib.load(model_path)
