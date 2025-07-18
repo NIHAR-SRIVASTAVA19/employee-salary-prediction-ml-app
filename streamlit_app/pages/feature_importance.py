@@ -7,8 +7,10 @@ import os
 # Set the page title
 st.title("🔍 Feature Importance Analysis")
 
-# Path to the saved feature importance CSV
-csv_path = r".\pages\feature_importance.csv"
+BASE_DIR = os.path.dirname(__file__)
+csv_path = os.path.join(BASE_DIR, 'feature_importance.csv')
+
+
 
 try:
     # Load the feature importance data

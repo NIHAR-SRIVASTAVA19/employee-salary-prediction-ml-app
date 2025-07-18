@@ -1,4 +1,5 @@
 import streamlit as st
+import os
 import numpy as np
 import pandas as pd
 import seaborn as sns
@@ -10,7 +11,8 @@ st.markdown("<p style='text-align: center;'>A quick glance at how different mode
 st.markdown("----")
 
 # Load the saved model performance CSV
-csv_path = ".\pages\model_performance.csv"
+BASE_DIR = os.path.dirname(__file__)
+csv_path = os.path.join(BASE_DIR, 'model_performance.csv')
 try:
     df = pd.read_csv(csv_path)
 
@@ -46,10 +48,12 @@ try:
 except FileNotFoundError:
     st.error("⚠️ model_performance.csv not found in `pages` folder.")
 
-st.markdown("## 🔍 Confusion Matrix")
+st.subheader("🔍 Confusion Matrix")
 
 try:
-    cm = np.load(".\pages\confusion_matrix.npy")
+    BASE_DIR = os.path.dirname(__file__)
+    npy_path = os.path.join(BASE_DIR, 'confusion_matrix.npy')
+    cm = np.load(npy_path)
     fig, ax = plt.subplots()
     sns.heatmap(cm, annot=True, fmt="d", cmap="Blues", ax=ax)
     ax.set_xlabel("Predicted")

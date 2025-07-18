@@ -3,6 +3,7 @@ import pandas as pd
 import pickle
 import numpy as np
 import joblib
+import os
 
 
 # Mapping for education levels to numerical values
@@ -67,8 +68,15 @@ race_mapping = {
     "American Indian or Alaska Native": "Amer-Indian-Eskimo",
     "Other / Not Specified": "Other"
 }
+# Get path of the current file (prediction.py)
+CURRENT_DIR = os.path.dirname(__file__)
 
-model_path = r"..\models\gb_pipeline.pkl"
+# Navigate two levels up to reach the root folder
+BASE_DIR = os.path.abspath(os.path.join(CURRENT_DIR, '..', '..'))
+
+# Build correct path to the model
+model_path = os.path.join(BASE_DIR, 'models', 'gb_pipeline.pkl')
+
 
 try:
     pipeline = joblib.load(model_path)
