@@ -84,12 +84,12 @@ try:
 except Exception as e:
     st.error(f"⚠️ Unexpected error while loading model: {e}")
 
-st.title("🔮 Income Prediction")
+st.title("🔮 Salary Prediction")
 st.markdown("Fill in the details below to predict whether the income is **>50K** or **<=50K**.")
 
 # Input form
 with st.form("prediction_form"):
-    age = st.slider("Age", 18, 90, 30, help="Select your current age.")
+    age = st.slider("Age", 18, 80, 30, help="Select your current age.")
     education = st.selectbox("Education",list(education_mapping.keys()),help="Highest education level you have completed.")
 
     gender = st.radio("Gender", ["Male", "Female"],help="Select your gender (used for statistical learning).")
