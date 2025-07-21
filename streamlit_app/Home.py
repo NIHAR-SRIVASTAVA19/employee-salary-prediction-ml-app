@@ -78,7 +78,7 @@ with col2:
     st.markdown("<div class='card'><div class='emoji'>📈</div><div class='card-title'>Feature Importance</div><p>Understand which features influenced the model the most.</p></div>", unsafe_allow_html=True)
 
 with col3:
-    st.markdown("<div class='card'><div class='emoji'>🧠</div><div class='card-title'>Make Prediction</div><p>Test the trained model with your own input values.</p></div>", unsafe_allow_html=True)
+    st.markdown("<div class='card'><div class='emoji'>🧠</div><div class='card-title'>Salary Prediction</div><p>Test the trained model with your own input values.</p></div>", unsafe_allow_html=True)
 
 st.markdown("---")
 
