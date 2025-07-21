@@ -62,7 +62,7 @@ st.markdown("<div class='main-title'>💼 Employee Salary Prediction App</div>",
 st.markdown("<div class='subtitle'>Predict whether an employee earns >50K or <=50k using ML models.</div>", unsafe_allow_html=True)
 st.markdown("""
     <div class='subtitle'>
-        A machine learning-powered tool that predicts if an employee earns above or below 50K/year.<br>
+        A machine learning-powered tool that predicts if an employee earns above or below 50K.<br>
         Simply explore models, understand important features, and try it yourself!
     </div>
 """, unsafe_allow_html=True)
