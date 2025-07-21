@@ -1,6 +1,6 @@
 # employee-salary-prediction-ml-app
-Employee salary prediction using ML with Streamlit dashboard
-# 🧠 Employee Salary Prediction using Machine Learning
+Employee Salary Prediction App using ML Algorithms and Streamlit
+# 🧠 Employee Salary Prediction App using ML Algorithms and Streamlit
 
 A web-based application to predict whether an employee earns **>50K or <=50K** based on their demographic and professional information.
 
@@ -29,7 +29,7 @@ Built with ❤️ using **Python**, **Machine Learning**, and **Streamlit**.
 | `Scikit-learn` | ML model training |
 | `Matplotlib`, `Seaborn` | Visualizations |
 | `Streamlit` | Interactive Web App |
-| `Pickle` | Model serialization |
+| `Pickle` , `Joblib` | Model saving and serialization |
 
 ---
 ##  🖥️ How to Run the App
